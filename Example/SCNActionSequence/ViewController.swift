@@ -89,8 +89,6 @@ class ViewController: UIViewController {
                 .then{ _ in print(" Handler 2")}
                 .then(target: nil, action: SCNAction.moveBy(x: -5.0, y: -2.0, z: 0.0, duration: 5.0))
                 .run{ print(" Comleted")}
-         
-
         }
     }
     
