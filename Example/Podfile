@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SCNActionSequence_Example' do
+  pod 'SCNActionSequence', :path => '../'
+
+  target 'SCNActionSequence_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
