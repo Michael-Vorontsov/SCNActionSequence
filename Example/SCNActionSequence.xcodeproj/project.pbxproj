@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0962A1F01FC064F6009CA7B3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 09743CEB1FC064C300DCDB9B /* art.scnassets */; };
 		09ECA9251FBFCE3A0030F018 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 09ECA9241FBFCE3A0030F018 /* CHANGELOG.md */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		05555010A2ABC41F9761D5B0 /* SCNActionSequence.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SCNActionSequence.podspec; path = ../SCNActionSequence.podspec; sourceTree = "<group>"; };
+		09743CEB1FC064C300DCDB9B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		09ECA9241FBFCE3A0030F018 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		4F56B963D0920D021995F87B /* Pods-SCNActionSequence_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SCNActionSequence_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SCNActionSequence_Example/Pods-SCNActionSequence_Example.release.xcconfig"; sourceTree = "<group>"; };
 		55897E35B2BC1D27A48A3241 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 		607FACD21AFB9204008FA782 /* Example for SCNActionSequence */ = {
 			isa = PBXGroup;
 			children = (
+				09743CEB1FC064C300DCDB9B /* art.scnassets */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -253,6 +256,7 @@
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				0962A1F01FC064F6009CA7B3 /* art.scnassets in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				09ECA9251FBFCE3A0030F018 /* CHANGELOG.md in Resources */,
 			);

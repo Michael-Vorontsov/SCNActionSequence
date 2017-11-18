@@ -8,7 +8,7 @@
 import SceneKit
 import SCNActionSequence
 
-class GameViewController: UIViewController {
+class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,24 +73,44 @@ class GameViewController: UIViewController {
             
             let capsule = (scnView.scene?.rootNode.childNode(withName: "capsule", recursively: true))!
             
+//            result.node
+//                .begin(action: SCNAction.moveBy(x: 5.0, y: 5.0, z: 0.0, duration: 2.0) )
+//                .then(wait: 2.0)
+//                .then(transactionDuration: 5.0) {
+//                    result.node.position = SCNVector3Zero
+//                    capsule.position = SCNVector3Zero
+//                }
+//                .runSimultaneouslyWith()
+//                .then(action: SCNAction.rotate(by: CGFloat.pi / 2.0, around: SCNVector3(x: 0, y: 0, z: 1), duration: 5.0))
+//                .then(action: SCNAction.moveBy(x: 5.0, y: 5.0, z: 0.0, duration: 2.0))
+//                .then(action: SCNAction.moveBy(x: -5.0, y: -2.0, z: 0.0, duration: 2.0))
+//                .then{ _ in print(" Handler 1") }
+//                .then(target: capsule, action: SCNAction.moveBy(x: -5.0, y: -2.0, z: 0.0, duration: 5.0))
+////                .
+////                .with(target: result, action: SCNAction.rotate(by: -CGFloat.pi / 2.0, around: SCNVector3(x: 0, y: 0, z: 1), duration: 1.0))
+//                .then{ _ in print(" Handler 2")}
+//                .then(target: nil, action: SCNAction.moveBy(x: -5.0, y: -2.0, z: 0.0, duration: 5.0))
+//                .run{ print(" Comleted")}
+         
+            let pos1 = SCNVector3(x: 5.0, y: 5.0, z: 5.0)
             result.node
-                .begin(action: SCNAction.moveBy(x: 5.0, y: 5.0, z: 0.0, duration: 2.0) )
-                .then(wait: 2.0)
-                .then(transactionDuration: 5.0) {
-                    ship.position = SCNVector3Zero
-                    capsule?.position = SCNVector3Zero
+                .begin(action: SCNAction.move(to: pos1, duration: 2.2))
+                .then { _ in
+                        print(" Handler 1")
+                    
                 }
-                .runSimultaneouslyWith()
-                .then(action: SCNAction.rotate(by: CGFloat.pi / 2.0, around: SCNVector3(x: 0, y: 0, z: 1), duration: 5.0))
-                .then(action: SCNAction.moveBy(x: 5.0, y: 5.0, z: 0.0, duration: 2.0))
-                .then(action: SCNAction.moveBy(x: -5.0, y: -2.0, z: 0.0, duration: 2.0))
-                .then{print(" Handler 1")}
-                .then(target: capsule, action: SCNAction.moveBy(x: -5.0, y: -2.0, z: 0.0, duration: 5.0))
-                .with(target: result, action: SCNAction.rotate(by: -CGFloat.pi / 2.0, around: SCNVector3(x: 0, y: 0, z: 1), duration: 1.0))
-                .then{print(" Handler 2")}
-                .then(target: nil, action: SCNAction.moveBy(x: -5.0, y: -2.0, z: 0.0, duration: 5.0))
-                .run{print(" Comleted")}
-            
+                .then { _ in
+                    print(" Handler 2")                }
+                .then { _ in
+                    print(" Handler 3")
+                    
+                }
+                .then(action: SCNAction.move(to: SCNVector3Zero, duration: 2.2))
+                .then { _ in
+                    print(" Handler 4")
+                    
+                }
+                .run{ print(" Comleted")}
         }
     }
     
